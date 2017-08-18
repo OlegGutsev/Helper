@@ -1,16 +1,27 @@
 package com.example.oleggutsev.helper;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.mobsandgeeks.saripaar.annotation.Max;
+import com.mobsandgeeks.saripaar.annotation.Min;
+import com.mobsandgeeks.saripaar.annotation.NotEmpty;
+import com.mobsandgeeks.saripaar.annotation.Or;
+import com.mobsandgeeks.saripaar.annotation.Password;
+
 public class MainActivity extends AppCompatActivity {
 
-    EditText login,
-             password;
+    @NotEmpty(message = "Пожалуйста,введите имя.")
+    @Min(value = 2)
+    @Or
+    @Max(value = 16)
+    private EditText login;
+
+    @Password(min = 6, message = "Пароль должен иметь не менее 6 символов")
+    private EditText password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
