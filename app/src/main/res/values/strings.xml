@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Helper</string>
+    <string name="app_name">HELPER</string>
+    <string name="login">Логин</string>
+    <string name="repeat_password">Подтвердите пароль</string>
+    <string name="password">Пароль</string>
+    <string name="main_password">********</string>
+    <string name="sign_in">Войти</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="have_an_account"><u>Я уже зарегистрирован.</u></string>
+    <string name="have_not_an_account">Зарегистрируйся сейчас.</string>
+    <string name="not_an_account">Нет аккаунта?</string>
 </resources>
